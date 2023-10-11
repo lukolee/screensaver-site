@@ -18,6 +18,7 @@ main {
 
 .stage .presenter {
     background-color: white;
+    border: 1pt solid #fff;
 
     margin: 100px;
     padding: 30px 40px;
@@ -30,7 +31,8 @@ main {
 
 .stage:hover .presenter {
     transform: translateY(-100px);
-    drop
+    box-shadow: 0px 10px 15px 5px rgba(0, 0, 0, 0.025);
+    border: 1pt solid #f3f3f3;
 
-    filter: brightness(0.9);
+    filter: brightness(1);
 }
