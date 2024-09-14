@@ -18,7 +18,8 @@ body {
 }
 
 main {
-    height: 100vh;
+    height: 100%;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,44 +34,46 @@ canvas {
 
 .stage {
     margin: 100px auto;
-    z-index: 1;
+    position: relative;
 }
 
+.inverse-text {
+    mix-blend-mode: difference;
+    position: -webkit-sticky;
+}
 
 .stage .presenter {
-    text-align: center;
-
+    position: relative;
+    width: fit-content;
     margin: 10em 5em;
     padding: 30px 40px;
-
     border-radius: 15px;
 
-    width: fit-content;
-    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-align: center;
 
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(10px);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
     color: white;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+    /* -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px); */
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); */
 }
 
-.stage:hover .presenter {
+/* .stage:hover .presenter {
     transform: translateY(-100px);
 
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     /* for pure white version */
-    /* box-shadow:
+/* box-shadow:
         inset 5px 5px 10px #fafafabf,
         inset -5px -5px 10px #f7f7f7c9,
         0px 0px 45px 15px rgba(0, 0, 0, 0.05); */
 
-    filter: brightness(1);
-
-    /* .inverse-text {
-        mix-blend-mode: difference;
-    } */
+filter: brightness(1);
 }
+
+*/
 
 /* Smooth blur transition */
 .stage .presenter::before {
@@ -89,19 +92,15 @@ canvas {
     border-radius: 30px;
 }
 
+/*
 .stage:hover .presenter {
     background-color: rgba(20, 20, 20, 0.65);
-}
+} */
 
-.stage:hover .presenter::after {
+/* .stage:hover .presenter::after {
     content: "";
 
     background-color: rgba(13, 13, 13, 0.5);
     position: absolute;
     bottom: -50%;
-}
-
-.inverse-text {
-    color: white;
-    mix-blend-mode: difference;
-}
+} */
