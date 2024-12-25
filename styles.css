@@ -9,7 +9,7 @@ body {
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     body {
         filter: invert(0);
     }
@@ -19,9 +19,11 @@ body {
     body {
         filter: invert(0.99);
     }
+} */
+
+body {
+    filter: invert();
 }
-
-
 
 main {
     height: 100%;
@@ -45,12 +47,15 @@ canvas {
 }
 
 .inverse-text {
-    mix-blend-mode: difference;
+    max-width: 350px;
+    mix-blend-mode: normal;
     position: -webkit-sticky;
     margin: 8px auto;
 }
 
 .stage .presenter {
+    mix-blend-mode: normal;
+
     position: relative;
     width: fit-content;
     margin: 10em 5em;
