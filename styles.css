@@ -9,7 +9,7 @@ body {
 }
 
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     body {
         filter: invert(0);
     }
@@ -19,11 +19,9 @@ body {
     body {
         filter: invert(0.99);
     }
-} */
-
-body {
-    filter: invert();
 }
+
+
 
 main {
     height: 100%;
@@ -47,15 +45,12 @@ canvas {
 }
 
 .inverse-text {
-    max-width: 350px;
-    mix-blend-mode: normal;
+    mix-blend-mode: difference;
     position: -webkit-sticky;
     margin: 8px auto;
 }
 
 .stage .presenter {
-    mix-blend-mode: normal;
-
     position: relative;
     width: fit-content;
     margin: 10em 5em;
@@ -65,7 +60,7 @@ canvas {
     text-align: center;
 
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    color: #5d9b6f;
+    color: white;
 }
 
 /* Smooth blur transition */
