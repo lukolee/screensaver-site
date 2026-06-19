@@ -1,27 +1,40 @@
-body {
-    font-family: -apple-system, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-
-    height: 100%;
-    width: 100%;
-    position: absolute;
-}
-
-
 @media (prefers-color-scheme: dark) {
+
+    :root,
+    html {
+        --background: #000;
+        --text: #fff;
+    }
+
     body {
         filter: invert(0);
     }
 }
 
 @media (prefers-color-scheme: light) {
+
+    :root,
+    html {
+        --background: #fff;
+        --text: #fff;
+    }
+
     body {
         filter: invert(0.99);
     }
 }
 
+body {
+    font-family: -apple-system, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 
+    background-color: var(--background);
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
 
 main {
     height: 100%;
@@ -60,7 +73,7 @@ canvas {
     text-align: center;
 
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    color: white;
+    color: var(--text);
 }
 
 /* Smooth blur transition */
@@ -79,49 +92,6 @@ canvas {
     opacity: 1;
     border-radius: 30px;
 }
-
-/* .stage:hover .presenter {
-    for pure white version
-    box-shadow:
-        inset 5px 5px 10px #fafafabf,
-        inset -5px -5px 10px #f7f7f7c9,
-        0px 0px 45px 15px rgba(0, 0, 0, 0.05);
-} */
-/*
-.stage:hover .presenter::after {
-    content: "";
-
-    background-color: rgba(13, 13, 13, 0.5);
-    position: absolute;
-    bottom: -50%;
-} */
-
-.stage:hover .presenter {
-    /* transform: translateY(-100px);
-
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px); */
-    /* for pure white version */
-    /* box-shadow:
-        inset 5px 5px 10px #fafafabf,
-        inset -5px -5px 10px #f7f7f7c9,
-        0px 0px 45px 15px rgba(0, 0, 0, 0.05);
-    */
-}
-
-
-/* .stage:hover .presenter {
-    background-color: rgba(20, 20, 20, 0.65);
-} */
-
-/*
-.stage:hover .presenter::after {
-    content: "";
-
-    background-color: rgba(13, 13, 13, 0.5);
-    position: absolute;
-    bottom: -50%;
-} */
 
 @media only screen and (max-width: 450px) {
     .stage .presenter {
