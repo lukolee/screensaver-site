@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="https://rawgit.com/patriciogonzalezvivo/glslCanvas/master/dist/GlslCanvas.js"></script>
+    <script type="text/javascript" src="GlslCanvas.js"></script>
 
     <meta name="theme-color" content="#fff" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#000" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="styles.css">
     <title>Hi!</title>
 </head>
+
 <body>
     <main>
-        <canvas
-            class="glslCanvas"
-            data-fragment="
+        <canvas class="glslCanvas" data-fragment="
                 precision highp float;
 
                 uniform vec2 u_resolution;
@@ -41,9 +41,7 @@
 
                 gl_FragColor = vec4(lineACol, 1.0);
                 }
-            "
-            width=1920
-            height=1080>
+            " width=1920 height=1080>
         </canvas>
 
         <div class="stage">
@@ -54,4 +52,5 @@
         </div>
     </main>
 </body>
+
 </html>
